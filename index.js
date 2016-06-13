@@ -38,6 +38,8 @@
 
 			if(!this.frame) {
 				this.frame = document.createElement("iframe");
+				//if the iframe isn't visible, you can't trigger events on it
+				this.frame.setAttribute("style","position:absolute!important;top:-9999999999999px!important;left:-99999999999999!important;");
 				this.el.appendChild(this.frame);
 			}
 
