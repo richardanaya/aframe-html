@@ -1,0 +1,34 @@
+<html>
+<head>
+    <script src="../../build/bundle.js"></script>
+</head>
+<body>
+<a-scene>
+    <a-sky color="#999999"></a-sky>
+    <a-plane id="screen" position="0 1.25 -1" scale="3 3 3" html-material="width:200;height:200"/>
+</a-scene>
+</body>
+<script>
+    var component = document.querySelector("#screen").components["html-material"];
+
+    var clicked = false;
+
+    var render = function(){
+        ReactDOM.render(
+                React.createElement("button",{style:{position:"absolute",top:"100px",left:"100px",background:clicked?"red":"auto"},onClick:buttonClicked},"Click Me"),
+                component.getDocument().body
+        );
+        component.updateTexture();
+    }
+
+    var buttonClicked = function(){
+        clicked = true;
+        render();
+    }
+    render();
+
+    setTimeout(function(){
+        component.triggerEventAt("click",101,101);
+    },3000)
+</script>
+</html>

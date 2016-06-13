@@ -1,0 +1,37 @@
+{
+  "name": "aframe-html",
+  "version": "0.0.1",
+  "description": "A component rendering and interacting with HTML in VR",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node node_modules/concurrently/src/main.js --kill-others \"./node_modules/webpack/bin/webpack.js --progress --colors --watch\" \"./node_modules/http-server/bin/http-server -s -c-1 -p 9998 .\" \"echo LISTENING ON localhost:9998\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/richardanaya/aframe-html.git"
+  },
+  "keywords": [
+    "aframe",
+    "html",
+    "vr",
+    "3d"
+  ],
+  "author": "Richard Anaya <richard.anaya@gmail.com> (http://www.richardanaya.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/richardanaya/aframe-html/issues"
+  },
+  "homepage": "https://github.com/richardanaya/aframe-html#readme",
+  "dependencies": {
+    "aframe": "latest",
+    "rasterizehtml": "^1.2.2"
+  },
+  "devDependencies": {
+    "concurrently": "^2.1.0",
+    "http-server": "^0.9.0",
+    "nodemon": "^1.9.2",
+    "webpack": "^1.13.1",
+    "react": "^15.1.0",
+    "react-dom": "^15.1.0"
+  }
+}
