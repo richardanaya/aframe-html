@@ -1,6 +1,6 @@
 {
   "name": "aframe-html",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A component rendering and interacting with HTML in VR",
   "main": "index.js",
   "scripts": {
