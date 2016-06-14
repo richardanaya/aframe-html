@@ -34,7 +34,11 @@
 			ctx.clearRect(0,0,this.data.width,this.data.height);
 			var texture = new THREE.Texture(this.canvas);
 			var material = new THREE.MeshBasicMaterial({ map: texture, transparent: true });
-			this.el.object3D.children[0].material = material;
+
+			//HACK: on the build of aframe i'm using child[0] is not immediately available
+			setTimeout(function(){
+				_this.el.object3D.children[0].material = material;
+			},100)
 
 			if(!this.frame) {
 				this.frame = document.createElement("iframe");
